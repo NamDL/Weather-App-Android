@@ -90,10 +90,10 @@ public class MainActivity extends AppCompatActivity {
             try {
                 URL url=null;
                 if(radiovalue.equalsIgnoreCase("Fahrenheit")){
-                    url = new URL("http://weatherforecasteveryday-env.elasticbeanstalk.com/forecast2.php?myaddress=" + streetValue + "&mycity=" + cityValue + "&myStates=" + stateValue + "&degree=Fahrenheit");
+                    url = new URL("http://cs-server.usc.edu:22045/forecast2.php?myaddress=" + streetValue + "&mycity=" + cityValue + "&myStates=" + stateValue + "&degree=Fahrenheit");
                     Log.i("URL", url.toString());
                 }else{
-                    url = new URL("http://weatherforecasteveryday-env.elasticbeanstalk.com/forecast2.php?myaddress=" + streetValue + "&mycity=" + cityValue + "&myStates=" + stateValue + "&degree=Celsius");
+                    url = new URL("http://cs-server.usc.edu:22045/forecast2.php?myaddress=" + streetValue + "&mycity=" + cityValue + "&myStates=" + stateValue + "&degree=Celsius");
                     Log.i("URL", url.toString());
                 }
                 extract.execute(url);
